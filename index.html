@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pokeCalc - ダウンロード</title>
+<style>
+  :root {
+    --accent: #512BD4;
+    --bg: #f7f7fb;
+    --card-bg: #ffffff;
+    --text: #222222;
+    --muted: #666666;
+    --border: #e3e3ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141c;
+      --card-bg: #1e1e29;
+      --text: #f0f0f5;
+      --muted: #a0a0b0;
+      --border: #33333f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  .card {
+    max-width: 560px;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .header img {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+  }
+  p {
+    line-height: 1.7;
+  }
+  .download-button {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 24px 0 8px;
+  }
+  .download-button:hover {
+    opacity: 0.9;
+  }
+  .version-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 32px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  ol, ul {
+    padding-left: 1.3em;
+    line-height: 1.8;
+  }
+  .warning {
+    background: rgba(255, 193, 7, 0.15);
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    margin-top: 8px;
+  }
+  code {
+    background: rgba(128, 128, 128, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  footer a {
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <img src="appicon.png" alt="pokeCalc アイコン">
+      <div>
+        <h1>pokeCalc</h1>
+        <p class="subtitle">Pokémon Champions 用ダメージ計算ツール（Windows デスクトップアプリ）</p>
+      </div>
+    </div>
+
+    <p>
+      個体値がなくなったポケモン新作「Pokémon Champions」の対戦向けに、能力値・特性・持ち物・場の状態などを
+      入力してダメージ範囲を計算できるツールです。
+    </p>
+
+    <a class="download-button" href="https://github.com/mitsuoL/pokeCalc-/releases/latest/download/pokeCalc-win-x64.zip">
+      ダウンロード（Windows / zip）
+    </a>
+    <p class="version-note">最新版は <a href="https://github.com/mitsuoL/pokeCalc-/releases/latest">Releases ページ</a>から確認できます</p>
+
+    <h2>インストール方法</h2>
+    <ol>
+      <li>上のボタンから zip ファイルをダウンロードする</li>
+      <li>好きな場所に展開（解凍）する</li>
+      <li>展開したフォルダ内の <code>ChampDamageCalc.Client.exe</code> を実行する</li>
+    </ol>
+    <p>インストーラー形式ではなく、そのまま実行できる展開型（ポータブル版）です。アンインストールしたい場合はフォルダごと削除するだけで大丈夫です。</p>
+
+    <div class="warning">
+      ⚠️ 初回実行時に「Windows によって PC が保護されました」という SmartScreen の警告が表示されることがあります。
+      これは配布元がコード署名されていない実行ファイルであるために出る一般的な警告です。
+      内容を確認の上、「詳細情報」→「実行」で起動できます。
+    </div>
+
+    <h2>動作環境</h2>
+    <ul>
+      <li>Windows 10 (10.0.19041 以降) / Windows 11</li>
+      <li>.NET ランタイムのインストールは不要（同梱版）</li>
+    </ul>
+
+    <footer>
+      <a href="https://github.com/mitsuoL/pokeCalc-">GitHub リポジトリ</a>
+    </footer>
+  </div>
+</body>
+</html>
